@@ -1,0 +1,19 @@
+
+<a routerLink="/comment-section-component" routerLinkActive="active">Comment Section</a>
+
+<br>
+<br>
+<form [formGroup]="addCommentForm" (ngSubmit)="onSubmit()">
+
+    <label class="tf">
+        <h5>User:</h5>
+        <input type="text" formControlName="user">
+    </label>
+<br>
+    <label class="tf">
+        <h5>Comment:</h5>
+        <input type="text" formControlName="comment">
+    </label>
+<br>
+    <button type="submit" [disabled]="!addCommentForm.valid">Submit</button>
+</form>

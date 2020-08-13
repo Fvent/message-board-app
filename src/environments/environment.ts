@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  commentsurl: "http://localhost:9000/forumapp",
   production: false
 };
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommentService } from "./services/comments/comment.service";
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'message-board-app';
+  title = 'ElFoRo Message Board';
+  
 }
