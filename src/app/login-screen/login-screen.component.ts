@@ -22,7 +22,6 @@ export class LoginScreenComponent implements OnInit {
   });
 
   user: User;
-  private dt = null;
 
   onSubmit(){
     console.log(this.loginForm.value.name,this.loginForm.value.password);
@@ -34,6 +33,8 @@ export class LoginScreenComponent implements OnInit {
     {
       console.log('response: ',data)
       if(data!=null){
+        sessionStorage.setItem('user', data.name);
+        sessionStorage.setItem('alias', data.alias);
         this.router.navigateByUrl('/comment-section-component');
       }
       

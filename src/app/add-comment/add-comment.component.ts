@@ -24,8 +24,8 @@ export class AddCommentComponent{
   comment: Comment;
 
   onSubmit(){
-    console.log(this.addCommentForm.value.user,this.addCommentForm.value.comment);
-    this.comment = new Comment(this.addCommentForm.value.user,this.addCommentForm.value.comment);
+    console.log(sessionStorage.getItem('alias'),this.addCommentForm.value.comment);
+    this.comment = new Comment(sessionStorage.getItem('alias'),this.addCommentForm.value.comment);
     console.log(this.comment.user, this.comment.comment)
     this.commentservice.addComment(this.comment).subscribe(data =>
       {console.log('response: ',data)});
