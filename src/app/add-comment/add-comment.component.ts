@@ -25,10 +25,15 @@ export class AddCommentComponent{
 
   onSubmit(){
     console.log(sessionStorage.getItem('alias'),this.addCommentForm.value.comment);
+
     this.comment = new Comment(sessionStorage.getItem('alias'),this.addCommentForm.value.comment);
-    console.log(this.comment.user, this.comment.comment)
-    this.commentservice.addComment(this.comment).subscribe(data =>
-      {console.log('response: ',data)});
+
+    console.log(this.comment.user, this.comment.comment);
+
+    this.commentservice.addComment(this.comment).subscribe(data => {
+        console.log('response: ',data)
+    });
+    
     location.reload(true);
   }
 }

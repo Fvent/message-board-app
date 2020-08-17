@@ -3,11 +3,11 @@
 
 <br>
 <br>
-<form [formGroup]="addCommentForm" (ngSubmit)="onSubmit()">
+<form class="form-group" [formGroup]="addCommentForm" (ngSubmit)="onSubmit()">
     <label>
         <h5>Comment:</h5>
-        <input type="text" formControlName="comment">
+        <textarea class="form-control" cols="50" rows="3" formControlName="comment"></textarea>
     </label>
 <br>
-    <button type="submit" [disabled]="!addCommentForm.valid">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!addCommentForm.valid">Submit</button>
 </form>
