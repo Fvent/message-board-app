@@ -3,6 +3,7 @@
 <br>
 <br>
 
+<p class="badinput" *ngIf="displaybad">{{ badinput }}</p>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     <label for="name"><h5>User: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h5></label>
