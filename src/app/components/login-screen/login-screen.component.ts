@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { User } from "../models/User";
-import { LoginService } from "../services/login/login.service";
+import { User } from "../../models/User";
+import { LoginService } from "../../services/login/login.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -25,13 +25,13 @@ export class LoginScreenComponent implements OnInit {
 
   onSubmit(){
     console.log(this.loginForm.value.name,this.loginForm.value.password);
-    this.user = new User(this.loginForm.value.name,this.loginForm.value.password);
+    this.user = new User(this.loginForm.value.name, "" ,this.loginForm.value.password);
     console.log(this.user.name, this.user.password);
 
 
     this.loginService.postLogin(this.user).subscribe(data =>
     {
-      console.log('response: ',data)
+      // console.log('response: ',data)
       if(data!=null){
         sessionStorage.setItem('user', data.name);
         sessionStorage.setItem('alias', data.alias);

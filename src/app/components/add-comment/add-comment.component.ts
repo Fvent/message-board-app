@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { CommentService } from "../services/comments/comment.service";
-import { Comment, CommentResponse } from "../models/Comment";
+import { CommentService } from "../../services/comments/comment.service";
+import { Comment, CommentResponse } from "../../models/Comment";
 
 @Component({
   selector: 'app-add-comment',

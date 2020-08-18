@@ -1,0 +1,16 @@
+/* input[type=text] {
+    border: 2px solid rgb(10, 139, 245);
+    border-radius: 4px;
+  } */
+
+form{
+  background-color: whitesmoke;
+}
+
+h5{
+  color: steelblue;
+}
+
+button{
+ background-color: purple;
+}

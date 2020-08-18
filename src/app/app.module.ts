@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommentService } from "./services/comments/comment.service";
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { CommentSectionComponent } from './comment-section/comment-section.component';
-import { AddCommentComponent } from './add-comment/add-comment.component';
-import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { CommentSectionComponent } from './components/comment-section/comment-section.component';
+import { AddCommentComponent } from './components/add-comment/add-comment.component';
+import { LoginScreenComponent } from './components/login-screen/login-screen.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommentSectionComponent,
     AddCommentComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,

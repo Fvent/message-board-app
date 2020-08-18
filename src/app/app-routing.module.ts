@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CommentSectionComponent } from './comment-section/comment-section.component';
-import { AddCommentComponent } from './add-comment/add-comment.component';
-import { LoginScreenComponent } from "./login-screen/login-screen.component";
+import { CommentSectionComponent } from './components/comment-section/comment-section.component';
+import { AddCommentComponent } from './components/add-comment/add-comment.component';
+import { LoginScreenComponent } from "./components/login-screen/login-screen.component";
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 const routes: Routes = [
   { path: '', component: LoginScreenComponent },
   { path: 'comment-section-component', component: CommentSectionComponent },
-  { path: 'add-comment-component', component: AddCommentComponent}
+  { path: 'add-comment-component', component: AddCommentComponent},
+  { path: 'user-register-component', component: UserRegistrationComponent}
 ];
 
 @NgModule({
