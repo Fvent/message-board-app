@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { CommentSectionComponent } from './components/comment-section/comment-se
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { LoginScreenComponent } from './components/login-screen/login-screen.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { DataSharingService } from "../app/services/data-sharing/data-sharing.service";
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule
   ],
-  providers: [CommentService],
+  providers: [CommentService, DataSharingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

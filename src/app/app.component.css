@@ -1,0 +1,15 @@
+.headofpage {
+    background-color: silver;
+}
+
+h1 {
+    position: relative;
+    display: inline-block;
+    margin-right: 70%;
+}
+
+button {
+    position: absolute;
+    display: inline-flex;
+    margin-top: .5%;
+}

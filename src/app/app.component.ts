@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CommentService } from "./services/comments/comment.service";
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { DataSharingService } from "../app/services/data-sharing/data-sharing.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,32 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'ElFoRo Message Board';
+  isUserLoggedIn: boolean;
+
+  constructor(private dataSharingService: DataSharingService, private router: Router){
+    this.dataSharingService.isUserLoggedIn.subscribe( value => {
+      this.isUserLoggedIn = value;
+  });
+  }
+
+  // ngOnInit(){
+  //   this.displaylogout = false;
+  // }
   
+  onLogout(){
+    this.dataSharingService.isUserLoggedIn.next(false);
+    sessionStorage.removeItem('user');
+    sessionStorage.removeItem('alias');
+    this.router.navigateByUrl('');
+  }
+  
+  
+  
+  
+  
+  
+  
+
+
+
 }

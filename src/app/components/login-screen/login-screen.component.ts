@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from "@angular/forms";
 import { User } from "../../models/User";
 import { LoginService } from "../../services/login/login.service";
 import { Router } from "@angular/router";
+import { DataSharingService } from "../../services/data-sharing/data-sharing.service";
 
 @Component({
   selector: 'app-login-screen',
@@ -11,7 +12,7 @@ import { Router } from "@angular/router";
 })
 export class LoginScreenComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private dataSharingService: DataSharingService) { }
 
   ngOnInit(): void {
   }
@@ -38,6 +39,7 @@ export class LoginScreenComponent implements OnInit {
         sessionStorage.setItem('user', data.name);
         sessionStorage.setItem('alias', data.alias);
         this.router.navigateByUrl('/comment-section-component');
+        this.dataSharingService.isUserLoggedIn.next(true);
       }
       else{
         this.displaybad=true;
