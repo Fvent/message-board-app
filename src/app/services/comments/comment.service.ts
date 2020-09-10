@@ -13,7 +13,7 @@ export class CommentService {
 
    
    private allcommentsurl = environment.commentsurl+'/allcomments';
-   private addcommenturl = 'http://localhost:9000/forumapp/addcomment';
+   private addcommenturl = environment.commentsurl+'/addcomment';
 
    constructor(private http: HttpClient) { }
 

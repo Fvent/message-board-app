@@ -34,6 +34,6 @@ export class AddCommentComponent{
         console.log('response: ',data)
     });
     
-    location.reload(true);
+    // location.reload(true);
   }
 }
