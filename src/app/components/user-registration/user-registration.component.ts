@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from "@angular/forms";
 import { User } from "../../models/User";
 import { RegisterService } from "../../services/register/register.service";
 import { Router } from "@angular/router";
+import { DataSharingService } from "../../services/data-sharing/data-sharing.service";
 
 @Component({
   selector: 'app-user-registration',
@@ -11,7 +12,7 @@ import { Router } from "@angular/router";
 })
 export class UserRegistrationComponent implements OnInit {
 
-  constructor(private registerService: RegisterService, private router: Router) { }
+  constructor(private registerService: RegisterService, private router: Router, private dataSharingService: DataSharingService) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,7 @@ export class UserRegistrationComponent implements OnInit {
           sessionStorage.setItem('user', data.name);
           sessionStorage.setItem('alias', data.alias);
           this.router.navigateByUrl('/comment-section-component');
+          this.dataSharingService.isUserLoggedIn.next(true);
         }
         
       });

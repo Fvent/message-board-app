@@ -8,8 +8,19 @@ h1 {
     margin-right: 70%;
 }
 
-button {
+/* button {
     position: absolute;
     display: inline-flex;
     margin-top: .5%;
+    margin-right: 25%;
+} */
+
+button {
+    /* line-height: 12px; */
+    width: 5em;
+    margin-top: 0;
+    margin-right: 0;
+    position:absolute;
+    top:3%;
+    right:5%;
 }

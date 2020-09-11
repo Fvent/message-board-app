@@ -7,7 +7,7 @@
 <form class="form-group" [formGroup]="addCommentForm" (ngSubmit)="onSubmit()">
     <label>
         <h5>Write a comment</h5>
-        <textarea class="form-control" cols="100" rows="3" formControlName="comment"></textarea>
+        <textarea class="form-control ta" cols="100" rows="3" formControlName="comment"></textarea>
     </label>
 <br>
     <button type="submit" class="btn btn-primary" [disabled]="!addCommentForm.valid">Submit</button>
