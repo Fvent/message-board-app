@@ -11,6 +11,7 @@ import { AddCommentComponent } from './components/add-comment/add-comment.compon
 import { LoginScreenComponent } from './components/login-screen/login-screen.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { DataSharingService } from "../app/services/data-sharing/data-sharing.service";
+import { MessagingComponent } from './pages/messaging/messaging.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DataSharingService } from "../app/services/data-sharing/data-sharing.se
     CommentSectionComponent,
     AddCommentComponent,
     LoginScreenComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    MessagingComponent
   ],
   imports: [
     BrowserModule,

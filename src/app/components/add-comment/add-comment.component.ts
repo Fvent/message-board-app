@@ -34,7 +34,7 @@ export class AddCommentComponent{
         console.log('response: ',data)
     });
     
-    // location.reload();
+    location.reload();
     
     // document.getElementsByClassName("form-control ta").item.call
   }

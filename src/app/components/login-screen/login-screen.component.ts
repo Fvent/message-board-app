@@ -38,7 +38,7 @@ export class LoginScreenComponent implements OnInit {
       if(data!=null){
         sessionStorage.setItem('user', data.name);
         sessionStorage.setItem('alias', data.alias);
-        this.router.navigateByUrl('/comment-section-component');
+        this.router.navigateByUrl('/app-messaging-component');
         this.dataSharingService.isUserLoggedIn.next(true);
       }
       else{

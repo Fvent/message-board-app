@@ -1,12 +1,21 @@
 <div >
     <h3>Comments</h3>
   
-    <a routerLink="/add-comment-component" routerLinkActive="active">Add Comment</a>
+    <!-- <a routerLink="/add-comment-component" routerLinkActive="active">Add Comment</a> -->
 
     <br>
     <br>
-    <div *ngFor="let item of commentdata; let i = index">
-      <h6>{{ item.user }} : {{ item.comment}}</h6>
+
+    <div class="container">
+      <div class="jumbotron">
+
+        <div *ngFor="let item of commentdata; let i = index">
+          <h5 class="display-5">{{ item.user }} : {{ item.comment}}</h5>
+        </div>
+
+      </div>
     </div>
+    
+    
   
   </div>

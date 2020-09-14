@@ -4,11 +4,13 @@ import { CommentSectionComponent } from './components/comment-section/comment-se
 import { AddCommentComponent } from './components/add-comment/add-comment.component';
 import { LoginScreenComponent } from "./components/login-screen/login-screen.component";
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { MessagingComponent } from "./pages/messaging/messaging.component";
 
 const routes: Routes = [
   { path: '', component: LoginScreenComponent },
-  { path: 'comment-section-component', component: CommentSectionComponent },
-  { path: 'add-comment-component', component: AddCommentComponent},
+  // { path: 'comment-section-component', component: CommentSectionComponent },
+  // { path: 'add-comment-component', component: AddCommentComponent},
+  { path: 'app-messaging-component', component: MessagingComponent},
   { path: 'user-register-component', component: UserRegistrationComponent}
 ];
 
